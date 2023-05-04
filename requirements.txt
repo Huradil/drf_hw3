@@ -1,2 +1,5 @@
-django==4.2
+django
 djangorestframework
+Pillow
+django-cors-headers
+drf-yasg
