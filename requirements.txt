@@ -1,5 +1,7 @@
-django
+django==4.2
 djangorestframework
-Pillow
 django-cors-headers
 drf-yasg
+Pillow
+django-environ
+psycopg2
