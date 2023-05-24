@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  backend:
+    build: ./backend_drf3
+    command: python manage.py runserver 0.0.0.0:3000
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.env
+    volumes:
+      - ./backend_drf3/:/usr/src/backend_drf3/
+  postgres_db:
+    image: postgres:13.11
+    environment:
+      - POSTGRES_DB=drf3_db
+      - POSTGRES_USER=drf3_user
+      - POSTGRES_PASSWORD=290290
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

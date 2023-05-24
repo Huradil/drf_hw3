@@ -4,4 +4,4 @@ django-cors-headers
 drf-yasg
 Pillow
 django-environ
-psycopg2
+psycopg2-binary
