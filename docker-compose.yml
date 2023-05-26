@@ -1,11 +1,11 @@
 version: "3.3"
 
 services:
-  backend:
+  backend_drf3:
     build: ./backend_drf3
-    command: python manage.py runserver 0.0.0.0:3000
+    command: python manage.py runserver 0.0.0.0:8000
     ports:
-      - "3000:3000"
+      - "8000:8000"
     env_file:
       - ./.env
     volumes:
